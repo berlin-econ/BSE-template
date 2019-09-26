@@ -30,6 +30,13 @@
 % \definecolor{main}{RGB}{64, 64, 64}
 % \definecolor{background}{RGB}{239, 239, 239}
 
+%%%%%%%%%%
+% Tables %
+%%%%%%%%%%
+
+% Better table ruler separation
+\usepackage{booktabs} 
+
 %%%%%%%%%%%%%%
 % Typography %
 %%%%%%%%%%%%%%
@@ -165,10 +172,13 @@
                 \begin{table}
                     \centering
                     \begin{tabular}{rcc}
-                         & Heading 1 & Heading 2 \\\hline
+                    	\toprule
+                         & Heading 1 & Heading 2 \\
+                        \toprule
                         Row 1 & \(v_{11}\) & \(v_{12}\) \\
                         Row 2 & \(v_{21}\) & \(v_{22}\) \\
                         Row 3 & \(v_{31}\) & \(v_{32}\) \\
+                        \bottomrule
                     \end{tabular}
                     \caption{Table caption.}
                     \label{tab:demo}

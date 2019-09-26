@@ -1,7 +1,7 @@
 Berlin School of Economics (BSE) Templates
 ==========================================
 
-In this repository you will find templates for posters and presentation slides using either Microsoft Powerpoint or LaTeX. If you make changes to any of these templates, feel free to share them with fellow members of the BSE through this repository.
+In this repository you will find templates for presentation posters and slides using either Microsoft Powerpoint or LaTeX. If you make changes to any of these templates, feel free to share them with fellow members of the BSE through this repository.
 
 For more information about the BSE, check out [our website](https://berlin-econ.de).
 
