@@ -13,3 +13,6 @@
 *.tdo
 *.toc
 *.xml
+*.fls
+*.fdb_latexmk
+
