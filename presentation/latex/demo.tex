@@ -14,8 +14,17 @@
 % Fira Fonts may not work out of the box on Windows.
 % Use classic 'Computer Modern' fonts instead.
 
-%\usetheme{bse}
-\usetheme[nofirafonts]{bse}
+% Decide on the look of the footline. It can be 
+% progressing from left to right with each slide (standard)
+% or be suppressed (option "none") or show the short title
+% and short author as specified below in the \title and 
+% \author command (option "fullbar").
+
+% \usetheme{bse}
+% \usetheme[nofirafonts]{bse}
+% \usetheme[numbering=none, nofirafonts]{bse}
+\usetheme[numbering=fullbar, nofirafonts]{bse}
+
 
 % You can specify custom colours.
 % \definecolor{main}{RGB}{64, 64, 64}
@@ -40,9 +49,9 @@
 % Title page %
 %%%%%%%%%%%%%%
 
-\title{The Berlin School of Economics}
+\title[Short Title]{The Berlin School of Economics}
 \subtitle{A Beamer Template}
-\author{W. Humboldt\texorpdfstring{\\}{,} A. Humboldt}
+\author[Humboldt \& Humboldt]{W. Humboldt\texorpdfstring{\\}{,} A. Humboldt}
 \titlegraphic{\includegraphics[height=4cm]{bse.png}}
 \institute{Berlin School of Economics}
 \date{\today}

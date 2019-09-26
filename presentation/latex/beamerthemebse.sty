@@ -413,6 +413,9 @@
             \begin{tikzpicture}[inner xsep=0.5em, inner ysep=0.5ex]
                 \clip (0,0) rectangle ++(\paperwidth,\the\focus@pbar@height);
                 \fill[footline.bg] (0,0) rectangle ++(\paperwidth,\the\focus@pbar@height);
+
+                \node[anchor=west, footline.fg] at ({\the\focus@pbar@rightoffset},{0.5\focus@pbar@height}) {\strut\insertshorttitle};
+                \node[align=center, footline.fg] at ({0.5\paperwidth},{0.5\focus@pbar@height}) {\strut\insertshortauthor};
                 
                 \node[anchor=east, footline.fg] at ({\paperwidth-\the\focus@pbar@rightoffset},{0.5*\focus@pbar@height}) {\strut\insertframenumber};
                 \node[footline.fg] at ({\paperwidth-\the\focus@pbar@rightoffset},{0.5*\focus@pbar@height}) {\strut/};
