@@ -16,3 +16,5 @@
 *.fls
 *.fdb_latexmk
 
+*.pdf
+
