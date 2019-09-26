@@ -28,6 +28,14 @@
 % Conventions for date, time, hyphenation etc.
 \usepackage[UKenglish]{babel}
 
+%%%%%%%%%%%%%%%%
+% Bibliography %
+%%%%%%%%%%%%%%%%
+
+% Use natbib for author-year style
+\usepackage[round]{natbib}
+\bibliographystyle{plainnat}
+
 %%%%%%%%%%%%%%
 % Title page %
 %%%%%%%%%%%%%%
@@ -167,7 +175,6 @@
     \begin{frame}{References}
         \nocite{*}
         \bibliography{demo_bibliography}
-        \bibliographystyle{plain}
     \end{frame}
     
     \begin{frame}{Backup frame}
