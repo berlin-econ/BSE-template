@@ -127,6 +127,7 @@
 
 
 % SET FONTS. -------------------------------------------------------------------
+\if@focus@loadfirafonts
 \setbeamerfont{title}{size=\huge, shape=\scshape\bfseries}
 \setbeamerfont{subtitle}{size=\Large, shape=\scshape, parent=structure}
 \setbeamerfont{author}{size=\Large, shape=\scshape}
@@ -146,11 +147,28 @@
 
 \setbeamerfont{caption name}{shape=\bfseries}
 
-\setbeamerfont{bibliography item}{size=\small, shape=\scshape}
-\setbeamerfont{bibliography entry author}{size=\small, shape=\scshape}
-\setbeamerfont{bibliography entry title}{size=\small, series=\scshape\bfseries}
-\setbeamerfont{bibliography entry location}{size=\small, shape=\scshape\normalfont}
-\setbeamerfont{bibliography entry note}{size=\small, shape=\scshape\normalfont}
+\else
+
+\setbeamerfont{title}{size=\huge, shape=\bfseries}
+\setbeamerfont{subtitle}{size=\Large, parent=structure}
+\setbeamerfont{author}{size=\Large}
+
+\setbeamerfont{institute}{size=\large}
+\setbeamerfont{date}{size=\large}
+
+\setbeamerfont{sectiontitle}{size=\huge, series=\bfseries}
+\setbeamerfont{subsectiontitle}{size=\Large, series=\bfseries}
+\setbeamerfont{frametitle}{size=\Large}
+
+\setbeamerfont{footline}{size=\footnotesize}
+
+\setbeamerfont{focusframe}{size=\huge}
+
+\setbeamerfont{description item}{shape=\bfseries}
+
+\setbeamerfont{caption name}{shape=\bfseries}
+
+\fi
 
 \mode<all>
 
