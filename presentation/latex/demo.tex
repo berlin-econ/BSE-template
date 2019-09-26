@@ -3,6 +3,10 @@
 
 \documentclass{beamer}
 
+% Disable annoying warning about unavailable font size.
+% Computer Modern does not have the font size beamer wants.
+\let\Tiny=\tiny
+
 %%%%%%%%%%%%%%%%
 % Beamer theme %
 %%%%%%%%%%%%%%%%
@@ -13,9 +17,9 @@
 %\usetheme{bse}
 \usetheme[nofirafonts]{bse}
 
-% Use Berlin School of Economics colours.
-\definecolor{main}{RGB}{25, 90, 150}
-\definecolor{background}{RGB}{250, 250, 250}
+% You can specify custom colours.
+% \definecolor{main}{RGB}{64, 64, 64}
+% \definecolor{background}{RGB}{239, 239, 239}
 
 %%%%%%%%%%%%%%
 % Typography %
@@ -66,15 +70,15 @@
     \end{frame}
     
     \begin{frame}[noframenumbering]{No frame numbering}
-        This frame is not numbered and is citing reference \cite{knuth74}.
+        This frame is not numbered and is citing \cite{knuth74}.
     \end{frame}
     
     \begin{frame}{Typesetting and Math}
-        The packages \texttt{inputenc} and \texttt{FiraSans}\footnote{\url{https://fonts.google.com/specimen/Fira+Sans}}\textsuperscript{,}\footnote{\url{http://mozilla.github.io/Fira/}} are used to properly set the main fonts.
+        The packages \texttt{inputenc} and \texttt{FiraSans}\footnote{\url{https://fonts.google.com/specimen/Fira+Sans}}\textsuperscript{,}\footnote{\url{http://mozilla.github.io/Fira/}} are used to properly set the main fonts. Unless you are on Windows and don't want to install \texttt{FiraSans}. Then you can use old school \texttt{Computer Modern}.
         \vfill
         This theme provides styling commands to typeset \emph{emphasized}, \alert{alerted}, \textbf{bold}, \textcolor{example}{example text}, \dots
         \vfill
-        \texttt{FiraSans} also provides support for mathematical symbols:
+        \texttt{FiraSans} and \texttt{Computer Modern} also provides support for mathematical symbols:
         \begin{equation*}
             e^{i\pi} + 1 = 0.
         \end{equation*}
