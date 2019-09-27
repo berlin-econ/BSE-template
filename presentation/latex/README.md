@@ -55,12 +55,12 @@ Thank You and License
 ---------------------
 
 You can create a 'thank you' slide by including 
-````latex
+```latex
 \makethanks
 ```
 
 at the appropriate place. The thank you message can be edited via 
-```
+```latex
 \thanksmessage{Have a great day.}
 ```
 
