@@ -1,5 +1,5 @@
 # BSE v1.0
-A LaTeX beamber presentation theme for the Berlin School of Economics. It is based on the [focus](https://github.com/elauksap/focus-beamertheme) theme that aims at a clean, minimalist design with few distractions and thus puts the focus directly on the content.
+A LaTeX beamer presentation theme for the Berlin School of Economics. It is based on the [focus](https://github.com/elauksap/focus-beamertheme) theme that aims at a clean, minimalist design with few distractions and thus puts the focus directly on the content.
 
 The theme requires the packages [appendixnumberbeamer](https://ctan.org/pkg/appendixnumberbeamer),
 and [PGF/TikZ](https://ctan.org/pkg/pgf) to be installed in your LaTeX distribution.
@@ -9,7 +9,7 @@ Demo
 ----
 A full demo is available. Refer to `demo.tex` and see the demo at [overleaf.com](https://www.overleaf.com/read/jkvxrmxhvmbn).
 
-![](presentation/images/BSE_Latex_Title.png)
+![](../images/BSE_Latex_Title.png)
 
 Instructions
 ============
@@ -29,6 +29,7 @@ The footline numbering can be customized through the theme option _numbering_. T
 ```latex
 \usetheme[numbering=progressbar]{bse}
 ```
+
 that shows a progress bar of increasing length on the footline.
 
 Alternatively, a full footline bar with author, title and frame numbering can be shown with:
