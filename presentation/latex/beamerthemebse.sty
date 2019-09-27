@@ -22,6 +22,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{beamerthemebse}[2019/09/26 v1.0 BSE Beamer theme]
 
+
 \mode<presentation>
 
 
@@ -54,6 +55,7 @@
 % SET MARGINS. -----------------------------------------------------------------
 \setbeamersize{text margin left=0.75cm, text margin right=0.75cm}
 \setlength{\leftmargini}{0.75cm}
+
 
 \mode<all>
 
@@ -560,5 +562,31 @@
     \vsize\textheight%
 }
 
+% From https://tex.stackexchange.com/questions/253110/how-to-put-the-thank-you-slide-style-into-a-beamertheme
+% the ``Thank you'' page
+\def\makethanks{%
+  \begin{frame}[focus]
+  \vskip 3em
+  \@thanksmessage
+  \vskip 2em
+  \makelicense
+  \end{frame}
+}
+
+\def\makelicense{%
+    \begin{figure}
+        \includegraphics[width=1em]{cc.png}
+        \includegraphics[width=1em]{by.png}\\
+        \tiny Except where otherwise noted, this work is licensed under\\
+        \href{https://creativecommons.org/licenses/by/4.0/}{https://creativecommons.org/licenses/by/4.0/}
+    \end{figure}
+}
+% commands for the title and message of the "Thank you" page
+\def\thankstitle#1{\def\@thankstitle{#1}}
+\def\thanksmessage#1{\def\@thanksmessage{#1}}
+
+
+
 \mode<all>
+
 
