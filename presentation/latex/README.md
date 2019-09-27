@@ -1,103 +1,78 @@
-# Focus v2.4
-A presentation theme for LaTeX Beamer that aims at a clean and minimalist design,
-so to minimize distractions and put the focus directly on the content.
+# BSE v1.0
+A LaTeX beamber presentation theme for the Berlin School of Economics. It is based on the [focus](https://github.com/elauksap/focus-beamertheme) theme that aims at a clean, minimalist design with few distractions and thus puts the focus directly on the content.
 
-This package is available through the [CTAN](https://ctan.org/pkg/beamertheme-focus) in
-most LaTeX distributions such as [MiKTeX](https://ctan.org/pkg/miktex) and [TeXLive](https://ctan.org/pkg/texlive).
-
-Requires the packages [appendixnumberbeamer](https://ctan.org/pkg/appendixnumberbeamer),
-[fira](https://ctan.org/pkg/fira) and [PGF/TikZ](https://ctan.org/pkg/pgf)
-to be installed in your LaTeX distribution.
+The theme requires the packages [appendixnumberbeamer](https://ctan.org/pkg/appendixnumberbeamer),
+and [PGF/TikZ](https://ctan.org/pkg/pgf) to be installed in your LaTeX distribution.
+The [fira](https://ctan.org/pkg/fira) package provides a nice set of fonts, which are optional though.
 
 Demo
 ----
-A full demo is available. Refer to `demo.tex` and `demo.pdf`.
+A full demo is available. Refer to `demo.tex` and see the demo at [overleaf.com](https://www.overleaf.com/read/jkvxrmxhvmbn).
 
-![](https://github.com/elauksap/focustheme/blob/master/demo-screenshots/demo-titlepage.jpg)
-![](https://github.com/elauksap/focustheme/blob/master/demo-screenshots/demo-subsectionpage.jpg)
-![](https://github.com/elauksap/focustheme/blob/master/demo-screenshots/demo-typeset.jpg)
-![](https://github.com/elauksap/focustheme/blob/master/demo-screenshots/demo-focus.jpg)
-![](https://github.com/elauksap/focustheme/blob/master/demo-screenshots/demo-references.jpg)
-![](https://github.com/elauksap/focustheme/blob/master/demo-screenshots/demo-appendix.jpg)
-
-Download
-========
-Download the latest release by following [this](https://github.com/elauksap/focustheme/releases) link.
+![](presentation/images/BSE_Latex_Title.png)
 
 Instructions
 ============
-After downloading, copy the files named beamer*themefocus.sty into the same folder as your LaTeX source file.
+After downloading, copy the file named `beamerthemebse.sty` into the same folder as your LaTeX source file together with the `images` folder.
 
 Then include the theme by writing:
 ```latex
 \documentclass{beamer}
 
-\usetheme{focus}
+\usetheme{bse}
 ```
 in the preamble of your document.
-
-Customize colors
-----------------
-Focus is based on two colors, namely `main` and `background`, that can be customized after including the theme.
-
-For example:
-```latex
-\usetheme{focus}
-
-\definecolor{main}{RGB}{92, 138, 168}
-\definecolor{background}{RGB}{240, 247, 255}
-```
-produces the following ice-blue color theme.
-
-![](https://github.com/elauksap/focustheme/blob/master/demo-screenshots/demo-titlepage-color.jpg)
 
 Customize the footline
 ----------------------
 The footline numbering can be customized through the theme option _numbering_. The standard value is:
 ```latex
-\usetheme[numbering=progressbar]{focus}
+\usetheme[numbering=progressbar]{bse}
 ```
-that shows an progress bar of increasing length on the footline.
+that shows a progress bar of increasing length on the footline.
 
-Alternatively, a full footline bar with the frame numbering can be shown with:
+Alternatively, a full footline bar with author, title and frame numbering can be shown with:
 ```latex
-\usetheme[numbering=fullbar]{focus}
+\usetheme[numbering=fullbar]{bse}
 ```
 
 The footline may also be disabled by typing:
 ```latex
-\usetheme[numbering=none]{focus}
+\usetheme[numbering=none]{bse}
 ```
 
 Customize fonts
 ---------------
-Focus is using the [Fira fonts](https://bboxtype.com/typefaces/FiraSans/) by default.
+BSE is using the [Fira fonts](https://bboxtype.com/typefaces/FiraSans/) by default.
 
 This can be changed by using the option _nofirafonts_:
 ```latex
-\usetheme[nofirafonts]{focus}
+\usetheme[nofirafonts]{bse}
+```
+
+Thank You and License
+---------------------
+
+You can create a 'thank you' slide by including 
+````latex
+\makethanks
+```
+
+at the appropriate place. The thank you message can be edited via 
+```
+\thanksmessage{Have a great day.}
+```
+
+in the preamble of your document. The thank you page always includes a license notice for the [Creative Commons Attribution 4.0 Internation](https://creativecommons.org/licenses/by/4.0/) license. If you want to include the license notice somewhere else, you can do so with
+```latex
+\makelicense
 ```
 
 License
 =======
-This software is released under the [GNU GPL v3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html).
+The theme itself is released under the [GNU GPL v3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html). 
 
-Contacts
-========
-If you are enjoying this theme please share it with your friends or colleagues!
+Acknowledgement
+===============
 
-Any suggestions, comments, criticism or appreciation are welcome!
-
-Contact information are available to registered users on my Github profile page.
-
-Contributors
-============
-Focus was initially created and designed by [Pasquale Africa](https://github.com/elauksap).
-
-The following people deserve appreciation and acknowledgment for improving the template with
-additions and modifications (in alphabetical order):
-
-- Sebastian Friedl
-- Benjamin Goldman
-
-A more detailed contribution list is found [here](https://github.com/elauksap/focus-beamertheme/graphs/contributors).
+The BSE theme is based on the [focus](https://github.com/elauksap/focus-beamertheme) theme by [Pasquale Africa](https://github.com/elauksap). Other contributors include Sebastian Friedl, and Benjamin Goldman.
