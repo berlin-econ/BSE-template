@@ -19,8 +19,16 @@ And here is the title page of the PowerPoint presentation template.
 
 ## Setup
 
-For setting up the beamer template, your first option would be to copy/clone this repository and start making changes to the demo file. Alternatively, you can copy the `beamerthemebse.sty` file to an existing presentation and use the theme via `\usetheme{bse}`.
+### Powerpoint
 
+Just open the `*.thmx` file and get started.
+
+### LaTeX
+
+For setting up the beamer template, you can either 
+
+	* copy/clone this repository and start making changes to the demo file, or
+	* copy the `beamerthemebse.sty` file and *images* folder to an existing presentation and use the theme via `\usetheme{bse}`.
 
 ## License
 
