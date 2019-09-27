@@ -64,7 +64,7 @@ at the appropriate place. The thank you message can be edited via
 \thanksmessage{Have a great day.}
 ```
 
-in the preamble of your document. The thank you page always includes a license notice for the [Creative Commons Attribution 4.0 Internation](https://creativecommons.org/licenses/by/4.0/) license. If you want to include the license notice somewhere else, you can do so with
+in the preamble of your document. The thank you page always includes a license notice for the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license. If you want to include the license notice somewhere else, you can do so with
 ```latex
 \makelicense
 ```
