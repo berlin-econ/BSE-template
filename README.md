@@ -27,8 +27,8 @@ Just open the `*.thmx` file and get started.
 
 For setting up the beamer template, you can either 
 
-	* copy/clone this repository and start making changes to the demo file, or
-	* copy the `beamerthemebse.sty` file and *images* folder to an existing presentation and use the theme via `\usetheme{bse}`.
+* copy/clone this repository and start making changes to the demo file, or
+* copy the `beamerthemebse.sty` file and *images* folder to an existing presentation and use the theme via `\usetheme{bse}`.
 
 ## License
 
