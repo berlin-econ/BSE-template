@@ -1,0 +1,320 @@
+% http://www.brian-amberg.de/uni/poster/baposter/baposter_guide.pdf and baposter.cls
+% adapted for Berlin School of Economics by Sebastian Geschonke
+% - added footer via \footheight and reducing the height of the rest
+% -----------------------------------------------------------------------------------
+
+\documentclass[a0paper, portrait, margin=2em, fontscale=0.292]{baposter}
+% based on baposter-class: landscape and portrait possible
+% adjust fontscale for scaling poster from e.g. A0 to A2
+% A0-fontscale: 0.292 % larger values for smaller font
+% A2-fontscale: 0.584
+
+% --> But notice the later pgf transformation
+
+
+\usepackage{wrapfig}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc} %unicode support
+\usepackage[T1]{fontenc}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{changepage}
+\usepackage[svgnames]{xcolor}
+\usepackage{svg}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage[sfdefault]{FiraSans}
+\usepackage{tikz}
+
+\selectcolormodel{cmyk}
+
+\graphicspath{{figures/}} % Directory in which figures are stored
+
+\newcommand{\compresslist}{%
+\setlength{\itemsep}{0pt}%
+\setlength{\parskip}{1pt}%
+\setlength{\parsep}{0pt}%
+}
+
+\newenvironment{boenumerate}
+  {\begin{enumerate}\renewcommand\labelenumi{\textbf\theenumi.}}
+  {\end{enumerate}}
+
+\newenvironment{boitemize}
+  {\begin{itemize}\renewcommand\labelenumi{\textbf\theenumi.}}
+  {\end{itemize}}
+
+\newcommand{\amount}{\headerheight+0.03\textheight}   %%<---- adjust
+
+\begin{document}
+% ------------------------ main colors -------------------------------
+\definecolor{darkblue}{cmyk}{0.84,0.42,0,0.6}
+\definecolor{bseblue}{cmyk}{0.84,0.42,0,0.39}
+\definecolor{bsebluehtml}{HTML}{195A9B}% like rgb but in hexadecimal, not between 0 and 1
+%\definecolor{bsebluergb}{rgb}{25,90,155}% creates problems but shouldn't
+% BSE-blue in RGB is 25-90-155 = 84,42,0,39 in CMYK
+\definecolor{bgbluedark}{HTML}{193A7B}% dark
+\definecolor{bgbluemedium}{HTML}{296AAB}% medium bright
+\definecolor{bgbluebright}{HTML}{498ABB}% very bright
+% --------------------------------------------------------------------
+
+%%% Setting Background Image for user-specification %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\background{
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[bseblue] ([yshift=-\amount]current page.north west) rectangle (current page.north east);
+  \fill[white] (current page.south west) rectangle ([yshift=-\amount]current page.north east);
+\end{tikzpicture}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% The main poster environment
+%%% \begin{baposter}{settings}{Eye Catcher}{Title}{Author}{University Logo}
+%%%-----------------------------------------------------------------------------
+%%% The settings are
+%%%   - grid=true,[false]:Show grid to help with alignment
+%%%   - colspacing=0.7em: Column spacing
+%%%   - columns=4:        number of columns (default 4 in landscape and 3 in portrait format) (maximum number is 6)
+%%%   - color=[orange]:   xcolor color definition used as the main color of the poster
+%%%   - colortwo=[white]: The other color for gradient based layouts
+%%%   - textborder=none,bars,coils,triangles,rectangle,rounded,roundedsmall,roundedleft,roundedright,[faded]
+%%% The style of the box around the text area
+%%%   - headerborder=none,closed,open
+%%%                       No extra border around box header, full border around box header or border that is open below.
+%%%   - headershape=rectangle,rounded,roundedleft,roundedright
+%%%                       Shape of the box-header region
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{poster}
+{
+% ------------------------------------------- TITLE AREA AND FOOT ---------------------
+eyecatcher=false, % Set to false for ignoring the left logo in the title and move the title left
+%headerheight=0.192\textheight, % Height of the header: for using "BSE_Logo_mit_untertitel.png
+headerheight=0.22\textheight, % Height of the header
+footheight=0.1\textheight, % Height of the foot
+%
+% ----------------------------------------------- MAIN BODY ---------------------------
+grid=false,
+columns={4}, % number of columns: max number is 6
+colspacing=1em, % Column spacing
+%
+% --------------------------------------------- BACKGROUND ----------------------------
+background=user, % background style: plain, shadelr(default), shadetb, none, user: Use the command \background{...} to define your own background
+bgColorOne=white, % Background color for the gradient on the left side of the poster (if shadeLR)
+bgColorTwo=bgbluebright, % Background color for the gradient on the right side of the poster (if shadeLR)
+%
+% ------------------------------------------ TEXT BOX POSITON -----------------------
+%column=0,row=0,span=1,
+%below=notset,above=notset,
+%bottomaligned=notset,
+%aligned=notset,
+%height=auto,
+% Name
+%name=noname,
+%
+% --------------------------------------------- TEXT BOX HEADER ---------------------
+boxheaderheight=2.1em,
+headerborder=open, % Adds a border around the header of content boxes
+% headerborder=none,closed,open
+headershade=plain,
+borderColor=darkblue, % Border color
+headerColorOne=bseblue, % Background color for the header in the content boxes (left side)
+headerColorTwo=wihte, % Background color for the header in the content boxes (right side)
+headerFontColor=white, % Text color for the header text in the content boxes
+headershape=roundedright, % Specify the rounded corner in the content box headers, can be: rectangle, small-rounded, roundedright, roundedleft or rounded
+headerfont=\Large\textsf, % Large, bold and sans serif font in the headers of content boxes
+%
+% ---------------------------------------------- TEXT BOX CONTENT -------------------
+%textfont={\setlength{\parindent}{1.5em}}, % Uncomment for paragraph indentation, you can further define the textfont
+boxshade=plain,
+boxColorOne=white, % Background color of the content boxes
+%boxColorTwo=cyan,
+boxpadding=0.5em,
+textborder=roundedleft, %rectangle, % Format of the border around content boxes, can be: none, bars, coils, triangles, rectangle, rounded, roundedsmall, roundedright or faded
+linewidth=0pt % Width of the border lines around content boxes
+}
+{}
+%
+%----------------------------------------------------------------------------------------
+% % % % % % % % % % % % % % % % 	TITLE AND AUTHOR NAME   % % % % % % % % % % % % % % %
+%----------------------------------------------------------------------------------------
+%
+{\vspace{-2em}% just for headerheight about 0.22
+%\textsf %Sans Serif
+{\color{white}% --------------------------------- changes text color of the title -----
+\vspace{0.5em}
+\begin{adjustwidth}{0.02\textwidth}{0pt}
+ \huge{\scshape{Berlin School of Economics}}% capital letters
+\end{adjustwidth}
+\vspace{-0.6em}
+ \noindent\makebox[\linewidth]{\textcolor{white}{\rule{\textwidth}{1pt}}}\vspace{0.01\textheight}
+ % ---------------------------------------------------- TITLE OF YOUR POSTER ------------
+ \begin{adjustwidth}{0.02\textwidth}{0pt}
+  \begin{spacing}{1.2}
+  \vspace{-0.5em}
+  \scshape{Punchline - Max 2 lines main message of the poster. Attention is a scarce resource.}
+  \end{spacing}
+ \end{adjustwidth}\vspace{-0.5em}
+}
+}%
+% ----------------------------------------------------- AUTHOR AND EMAIL ----------------
+{\color{white}% -------------------------------- defines textcolor for Author and Email
+\begin{adjustwidth}{0.02\textwidth}{0pt}
+  \sf\vspace{0em}\\
+  Author Buthor* and Cuthor Duthor
+  \small{
+  \vspace{0.2em}\\
+  buthor@bse.de, duthor@bse.de
+ \end{adjustwidth}}
+}
+% ------------------------------ HERE THE GRAPHIC ON THE RIGHT SIDE IS INCLUDED --------
+{\hspace{0.04\textwidth}
+% change the position of logo in baposter.cls
+% "\draw (north east) +(0em,3.5em+0.5\headerheight) node(logo) [anchor=east]   { {\usebox{\baposter@titleimage@right}} };"
+\includegraphics[width=0.20\textwidth]{logos/BSE_Logo_schrift_weisser_kreis_bg.png}
+\hspace{0.02\textwidth}
+} % University/lab/School logo
+%{\includegraphics[height=0.2\textwidth,angle=-90]{logos/BSE_Logo_schrift_weisser_kreis_bg.png}} % University/lab/School logo
+
+
+% ------------------------------------------- AREA OF CONTENT BOXES --------------------
+%\fontsize{7pt}{9}\selectfont% ---- select the fontsize + baselineskip, if it should differ
+% equivalent to a4 fontsize: divide by fontscaling from the documentclass and you find the approximate 'real' size
+%\vspace{-15em}% reduces white space above boxes% --> does not work
+
+\headerbox{Motivation}{name=motivation,column=0,row=0, span=1}{
+\lipsum[66]
+}
+
+\headerbox{Goal}{name=goal,column=1,row=0, span=2}{
+\lipsum[66]
+}
+
+\headerbox{Relevance}{name=relevance,column=3,row=0, span=1}{
+\lipsum[66]
+}
+
+\headerbox{Sources}{name=source,column=0,below=motivation,span=4}{
+
+\begin{tabularx}{\textwidth}{m{0.32\textwidth}|m{0.32\textwidth}|m{0.32\textwidth}}
+\centering\includesvg[height=0.05\textheight]{logos/HU} & \centering\includesvg[height=0.04\textheight]{logos/FU} & \centering\includesvg[height=0.03\textheight]{logos/DIW_BERLIN_CO_M_rgb}\\[0.05\textheight]
+\end{tabularx}
+\begin{tabularx}{\textwidth}{m{0.32\textwidth}|m{0.32\textwidth}|m{0.32\textwidth}}
+\begin{boitemize}\compresslist
+    \item List number 1
+    \item list number 2
+    \item last and least
+\end{boitemize}%
+&%
+\begin{boenumerate}\compresslist
+    \item List number 1
+    \item list number 2
+    \item last and least
+\end{boenumerate}%
+&%
+\begin{boenumerate}\compresslist
+    \item List number 1
+    \item list number 2
+    \item last and least
+\end{boenumerate}\\
+\end{tabularx}
+}
+
+
+\headerbox{Data Left}{name=dataL,column=0,below=source,span=2}{
+\begin{boenumerate}\compresslist
+    \item List number 1
+    \item list number 2
+    \item last and least
+\end{boenumerate}%
+}
+
+\headerbox{Data Right}{name=dataR,column=2,below=source,span=2}{
+\begin{boenumerate}\compresslist
+    \item List number 1
+    \item list number 2
+    \item last and least
+\end{boenumerate}%
+}
+
+
+\headerbox{Stylized Graphics}{name=graphics,span=4,column=0,below=dataL}{
+\begin{wrapfigure}{l}{0.3\textwidth}
+    \begin{center}
+        \includegraphics[width=0.15\linewidth]{logos/BSE_logo_mit_untertitel.png}
+    \end{center}
+    %\vspace{-145pt}
+\end{wrapfigure}
+
+\lipsum[2]
+
+\vspace{-5pt}
+\begin{center}
+    %\includegraphics[width=0.1\linewidth]{logos/BSE_logo_mit_untertitel.png}
+\end{center}
+}
+
+
+\headerbox{Hypotheses}{name=hypotheses,span=1,column=0,below=graphics}{ 
+\lipsum[66]
+}
+
+
+\headerbox{Conclusions}{name=conclusion,column=1,below=graphics,span=3, above=bottom}{
+\lipsum[4]
+\begin{boenumerate}\compresslist
+    \item List number 1
+    \item list number 2
+    \item last and least
+\end{boenumerate}
+}
+
+
+
+% ----------- in case references are needed ------------------------
+\iffalse
+\headerbox{References?}{name=references,column=0,span=1,below=hypotheses, above=bottom}{
+
+
+%\small % Reduce the font size in this block
+\renewcommand{\section}[2]{\vskip 0.05em} % Get rid of the default "References" section title
+%\nocite{*} % Insert publications even if they are not cited in the poster
+
+\lipsum[75]
+
+%\bibliographystyle{unsrt}
+%\bibliography{poster} % Use sample.bib as the bibliography file
+}
+\fi
+
+
+
+
+\end{poster}
+
+
+% --------------------------------------------------------------------
+% ---------- HERE BEGINS THE BSE FOOT ADAPTATION ---------------------
+
+\noindent\makebox[\linewidth]{\textcolor{bseblue}{\rule{\textwidth}{0.5pt}}}
+% \paperwidth instead of \textwidth for complete line from edge to edge
+\vspace{1em}
+
+\begin{tabularx}{\textwidth}{c c c c c c c c}
+%\hspace{-1em} 
+\includesvg[height=0.031\textheight]{logos/HU} & \includesvg[height=0.031\textheight]{logos/FU} & \includesvg[height=0.025\textheight]{logos/DIW_BERLIN_CO_M_rgb} & \includesvg[height=0.031\textheight]{logos/ESMT} & \includesvg[height=0.031\textheight]{logos/TU} & \includesvg[height=0.031\textheight]{logos/WZB} & \includesvg[height=0.031\textheight]{logos/UP} & \includesvg[height=0.031\textheight]{logos/HSoG} & \\
+\end{tabularx}
+
+% alternatively, try for each cell
+%\noindent\parbox[c]{\hsize}{\includesvg[height=0.03\textheight]{logos/HU}}
+
+\iffalse
+\topskip0pt
+\vspace*{\fill}
+\includegraphics[height=0.05\textheight]{logos/BSE_logo_mit_untertitel.png} % University/lab/School logo
+\vspace*{\fill}
+\fi
+
+
+\end{document}
