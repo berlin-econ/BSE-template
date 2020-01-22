@@ -7,9 +7,9 @@ For more information about the BSE, check out [our website](https://berlin-econ.
 
 ## Demo
 
-The beamer presentation can be view over at [overleaf.com](https://www.overleaf.com/read/jkvxrmxhvmbn).
+The beamer presentation can be viewed at [overleaf.com](https://www.overleaf.com/read/jkvxrmxhvmbn).
 
-This is a quick first impression of how the LaTeX beamer template looks like.
+This is a quick first impression of the LaTeX beamer template title page.
 
 ![](presentation/images/BSE_Latex_Title.png)
 
@@ -28,7 +28,7 @@ Just open the `*.thmx` file and get started.
 For setting up the beamer template, you can either 
 
 * copy/clone this repository and start making changes to the demo file, or
-* copy the `beamerthemebse.sty` file and *images* folder to an existing presentation and use the theme via `\usetheme{bse}`.
+* copy the [`beamerthemebse.sty`](presentation/latex/beamerthemebse.sty) file and [*presentation/latex/images*](presentation/latex/images/) folder to an existing presentation and use the theme via `\usetheme{bse}`.
 
 ## License
 
