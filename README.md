@@ -32,7 +32,7 @@ For setting up the beamer template, you can either
 
 ## License
 
-The templates are released under open source licenses. The LaTeX beamer template is released under the GNU General Public License v3.0. The Powerpoint templates are released under the Creative Commons Attribution Share Alike 4.0 International license. See the `LICENSE` file for details.
+The templates are released under open source licenses. The LaTeX beamer and poster templates are released under the GNU General Public License v3.0. The Powerpoint templates are released under the Creative Commons Attribution Share Alike 4.0 International license. See the `LICENSE` file for details.
 
-Please note that copyright of the institution logos lies with the respective institution and their usage is restricted to those affiliated. 
+Please note that copyright of the institution logos lies with the respective institution and usage is restricted to those affiliated.
 
