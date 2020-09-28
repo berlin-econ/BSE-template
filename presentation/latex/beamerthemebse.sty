@@ -67,37 +67,51 @@
 
 
 % DEFINE COLORS. ---------------------------------------------------------------
-\definecolor{main}{RGB}{25, 90, 150}
-\definecolor{background}{RGB}{250, 250, 250}
+\definecolor{main}{RGB}{0, 0, 0}
+\definecolor{background}{RGB}{255, 255, 255}
+
+\definecolor{BSEblue}{RGB}{25, 90, 155}
 
 \definecolor{alert}{RGB}{180, 0, 0}
-\definecolor{example}{RGB}{0, 110, 0}
+\definecolor{BSElightred}{RGB}{180, 0, 0}
+\definecolor{BSEdarkgreen}{RGB}{0, 110, 0}
+\definecolor{BSElightgreen}{RGB}{0, 120, 0}
+\definecolor{BSEwhite}{RGB}{255, 255, 255}
 
 
 % SET COLORS. ------------------------------------------------------------------
 \setbeamercolor{normal text}{fg=main, bg=background}
 \setbeamercolor{alerted text}{fg=alert}
-\setbeamercolor{example text}{fg=example}
+\setbeamercolor{example text}{fg=BSElightgreen}
 
-\setbeamercolor{titlelike}{fg=background, bg=main}
+\setbeamercolor{titlelike}{fg=BSEwhite,bg=BSEblue}
+\setbeamercolor{sectiontitle}{fg=BSEblue,bg=BSEwhite}
 \setbeamercolor{frametitle}{parent={titlelike}}
+\setbeamercolor{author}{fg=BSEblue,bg=BSEwhite}
+\setbeamercolor{logo}{fg=BSEwhite,bg=background}
+\setbeamercolor{button}{fg=BSEwhite,bg=BSEblue}
 
-\setbeamercolor{footline}{fg=background, bg=main}
+\setbeamercolor{title}{fg=BSEblue,bg=background}
+\setbeamercolor{shorttitle}{fg=BSEblue,bg=background}
 
-\setbeamercolor{block title}{bg=main!80!background, fg=background}
-\setbeamercolor{block body}{bg=main!10!background, fg=main}
+\setbeamercolor{footline}{parent={titlelike}}
+
+\setbeamercolor{block title}{bg=BSEblue!80!background, fg=BSEwhite}
+\setbeamercolor{block body}{bg=BSEblue!10!background, fg=main}
 
 \setbeamercolor{block title alerted}{bg=alert, fg=background}
 \setbeamercolor{block body alerted}{bg=alert!10!background, fg=main}
 
-\setbeamercolor{block title example}{bg=example, fg=background}
-\setbeamercolor{block body example}{bg=example!10!background, fg=main}
+\setbeamercolor{block title example}{bg=BSElightgreen, fg=background}
+\setbeamercolor{block body example}{bg=BSElightgreen!10!background, fg=main}
 
-\setbeamercolor{itemize item}{fg=main}
-\setbeamercolor{itemize subitem}{fg=main}
+\setbeamercolor{itemize item}{fg=BSEblue}
+\setbeamercolor{itemize subitem}{fg=BSEblue}
 
-\setbeamercolor{enumerate item}{fg=main!70!black}
-\setbeamercolor{enumerate subitem}{fg=main!70!black}
+\setbeamercolor{enumerate item}{fg=BSEblue}
+\setbeamercolor{enumerate subitem}{fg=BSEblue}
+\setbeamercolor{enumerate subsubitem}{fg=BSEblue}
+\setbeamercolor{item projected}{bg=BSEblue}
 
 \setbeamercolor{description item}{fg=main!70!black}
 \setbeamercolor{description subitem}{fg=main!70!black}
@@ -106,8 +120,8 @@
 
 \setbeamercolor{section in toc}{fg=main}
 \setbeamercolor{subsection in toc}{fg=main}
-\setbeamercolor{section number projected}{bg=main}
-\setbeamercolor{subsection number projected}{bg=main}
+\setbeamercolor{section number projected}{bg=BSEblue}
+\setbeamercolor{subsection number projected}{bg=BSEblue}
 
 \setbeamercolor{bibliography item}{fg=main}
 \setbeamercolor{bibliography entry author}{fg=main!70!black}
@@ -128,13 +142,12 @@
 \if@focus@loadfirafonts
 \setbeamerfont{title}{size=\huge, shape=\scshape\bfseries}
 \setbeamerfont{subtitle}{size=\Large, shape=\scshape, parent=structure}
-\setbeamerfont{author}{size=\Large, shape=\scshape}
+\setbeamerfont{author}{size=\normalsize, shape=\scshape}
 
-\setbeamerfont{institute}{size=\large, shape=\scshape}
-\setbeamerfont{date}{size=\large, shape=\scshape}
+\setbeamerfont{institute}{size=\normalsize, shape=\scshape}
+\setbeamerfont{date}{size=\scriptsize, shape=\scshape}
 
 \setbeamerfont{sectiontitle}{size=\huge, series=\scshape\bfseries}
-\setbeamerfont{subsectiontitle}{size=\Large, series=\scshape\bfseries}
 \setbeamerfont{frametitle}{size=\Large, shape=\scshape}
 
 \setbeamerfont{footline}{size=\scriptsize}
@@ -149,10 +162,10 @@
 
 \setbeamerfont{title}{size=\huge, shape=\bfseries}
 \setbeamerfont{subtitle}{size=\Large, parent=structure}
-\setbeamerfont{author}{size=\Large}
+\setbeamerfont{author}{size=\normalsize}
 
-\setbeamerfont{institute}{size=\large}
-\setbeamerfont{date}{size=\large}
+\setbeamerfont{institute}{size=\normalsize}
+\setbeamerfont{date}{size=\scriptsize}
 
 \setbeamerfont{sectiontitle}{size=\huge, series=\bfseries}
 \setbeamerfont{subsectiontitle}{size=\Large, series=\bfseries}
