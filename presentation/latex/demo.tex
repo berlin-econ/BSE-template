@@ -59,8 +59,7 @@
 \title[Short Title]{The Berlin School of Economics}
 \subtitle{A Beamer Template}
 \author[Humboldt \& Humboldt]{W. Humboldt\texorpdfstring{\\}{,} A. Humboldt}
-\titlegraphic{\includegraphics[height=4cm]{images/bse.png}}
-\institute{Berlin School of Economics}
+\institute{Berlin School of Economics\\ \footnotesize Conference XYZ}
 \date{\today}
 
 \thanksmessage{Or use the ``thank you'' slide.}
@@ -189,11 +188,28 @@
     \end{frame}
     
     \begin{frame}[focus]
-        \vskip 2em
-        Thanks for using the \textbf{BSE} theme!
-        \vskip 2em
+        \vskip 1em
+        Thanks for using the \textbf{BSE} theme!\\[-5mm]
+        \hrulefill\\
+        \vskip 1em
+        \usebeamercolor[fg]{BSEwhite}
+        \usebeamerfont{footline}
+        \textbf{Berlin School of Economics}\\
+        Editor: \textit{Name}\\
+        DIW Graduate Center\\
+        Mohrenstraße 58, 10117 Berlin\\
+        \url{www.diw.de/gc}\\
+        \href{mailto:example@berlin-econ.de}{example@berlin-econ.de}
+        \vskip 1em
         \footnotesize Include a license, if you want.
         \makelicense
+        \vfill
+        \begin{figure}[b]
+        	\setlength{\fboxsep}{0pt}%
+        	\setlength{\fboxrule}{0pt}
+         \fbox{\hspace{-0.83cm}\includegraphics[width=13cm]{images/logos/bse_members.png}}
+    	\end{figure}
+    	\vfill{}
     \end{frame}
  
     \makethanks
@@ -213,3 +229,4 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

@@ -592,11 +592,18 @@
 % the ``Thank you'' page
 \def\makethanks{%
   \begin{frame}[focus]
-  \vskip 3em
+  \vskip 1em
+  \includegraphics[width=2cm]{images/logos/bse_sub_round.png}
+  \vskip 1em
   \@thanksmessage
-  \vskip 2em
+  \vskip 1em
   \makelicense
-  \end{frame}
+\begin{figure}[b]
+        \setlength{\fboxsep}{0pt}%
+        \setlength{\fboxrule}{0pt}%
+        \fbox{\hspace{-0.83cm}\includegraphics[width=13cm]{images/logos/bse_members.png}}%
+\end{figure}[b]
+\end{frame}
 }
 
 \def\makelicense{%
