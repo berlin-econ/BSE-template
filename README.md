@@ -7,7 +7,7 @@ For more information about the BSE, check out [our website](https://berlin-econ.
 
 ## Demo
 
-The beamer presentation can be viewed at [overleaf.com](https://www.overleaf.com/read/jkvxrmxhvmbn).
+The beamer presentation can be viewed at [overleaf.com](https://www.overleaf.com/read/hqkhdmprysbk) (you may have to navigate to the presentation directory).
 
 This is a quick first impression of the LaTeX beamer template title page.
 
