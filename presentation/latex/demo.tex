@@ -12,7 +12,8 @@
 %%%%%%%%%%%%%%%%
 
 % Fira Fonts may not work out of the box on Windows.
-% Use classic 'Computer Modern' fonts instead.
+% Use classic 'Computer Modern' fonts instead by disabling firafonts with the
+% 'nofirafonts' switch.
 
 % Decide on the look of the footline. It can be 
 % progressing from left to right with each slide (standard)
@@ -21,12 +22,14 @@
 % \author command (option "fullbar").
 
 % \usetheme{bse}
+\usetheme[numbering=fullbar]{bse}
 % \usetheme[nofirafonts]{bse}
 % \usetheme[numbering=none, nofirafonts]{bse}
-\usetheme[numbering=fullbar, nofirafonts]{bse}
+% \usetheme[numbering=fullbar, nofirafonts]{bse}
 
 
 % You can specify custom colours.
+% See beamerthemebse.sty for details.
 % \definecolor{main}{RGB}{64, 64, 64}
 % \definecolor{background}{RGB}{239, 239, 239}
 
@@ -43,6 +46,10 @@
 
 % Conventions for date, time, hyphenation etc.
 \usepackage[UKenglish]{babel}
+
+%encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
 %%%%%%%%%%%%%%%%
 % Bibliography %
@@ -94,7 +101,7 @@
         This frame has an empty title and is aligned to top.
     \end{frame}
     
-    \begin{frame}[noframenumbering]{No frame numbering}
+    \begin{frame}[noframenumbering]{No frame numbering with a really long title on the frame, which still formats nicely. Does it?}
         This frame is not numbered and is citing \cite{knuth74}.
     \end{frame}
     
@@ -203,6 +210,7 @@
         \vskip 1em
         \footnotesize Include a license, if you want.
         \makelicense
+	\vskip 1.5em
         \vfill
         \begin{figure}[b]
         	\setlength{\fboxsep}{0pt}%

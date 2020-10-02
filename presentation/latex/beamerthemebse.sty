@@ -358,11 +358,16 @@
    \nointerlineskip
     \begin{beamercolorbox}[sep=0.3cm,wd=\paperwidth]{frametitle}
         \usebeamerfont{frametitle}%
-        \vbox{}\vskip-1ex%
+        \vbox{}\vskip-1.25ex\hskip 12pt%
+	\begin{minipage}{0.81\paperwidth}
+	\vskip 0.35ex
         \strut\insertframetitle\strut%
-        \hfill
-        \raisebox{-1.25ex}{\includegraphics[height=0.8cm,keepaspectratio,clip]{images/logos/bse_round.png}}
-        \vskip-0.8ex%
+	\end{minipage}%
+	\begin{minipage}{0.1\paperwidth}
+	~\hfill
+       \includegraphics[height=0.75cm,keepaspectratio]{images/logos/bse_round.png}
+	\end{minipage}
+        \vskip-0.75ex%
         \end{beamercolorbox}%
     \fi%
 }
